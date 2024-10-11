@@ -36,15 +36,36 @@
   height: min-content;
 
   h1.title {
-    font-size: 150px;
+    font-size: 8vw;
     color: var(--primary);
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
     -webkit-text-stroke: 3px var(--primary);
+
     display: block;
     text-align: center;
     flex: 1;
 
     margin-top: -100px;
+
+    --fill: 0%;
+    --a-color: var(--primary);
+    --b-color: #fff;
+
+    background: linear-gradient(
+      90deg,
+      var(--a-color) var(--fill),
+      var(--b-color) 0%
+    );
+
+    background-attachment: fixed;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
   }
 }
 
@@ -82,11 +103,11 @@
     left: 50%;
     top: 50%;
     transform: translateX(-50%);
-    animation: test 750ms ease-in-out infinite;
+    animation: pointDown 750ms ease-in-out infinite;
   }
 }
 
-@keyframes test {
+@keyframes pointDown {
   0% {
     transform: translateY(-60%);
   }
@@ -95,3 +116,23 @@
     transform: translateY(-50%);
   }
 }
+
+// @keyframes fill {
+//   @for $i from 0 through 100 {
+//     #{$i}% {
+//       --fill: #{$i}%;
+//       --b-color: #fff;
+//       --a-color: var(--primary);
+//     }
+//   }
+// }
+
+// @keyframes fillB {
+//   @for $i from 0 through 100 {
+//     #{$i}% {
+//       --fill: #{$i}%;
+//       --a-color: #fff;
+//       --b-color: var(--primary);
+//     }
+//   }
+// }
