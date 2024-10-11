@@ -5,6 +5,10 @@
   --primary-dark: #13416d;
 }
 
+::selection {
+  background-color: var(--primary);
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

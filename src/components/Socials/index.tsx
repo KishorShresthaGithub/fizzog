@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import Git from "./Git";
+import Git from "../../assets/icons/Git";
 import Link from "next/link";
 
 const socialsLinks = [

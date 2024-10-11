@@ -1,12 +1,10 @@
 import { ReactNode } from "react";
-import localFont from "next/font/local";
+import { Bevan } from "next/font/google";
 
-const alexandria = localFont({
-  src: "./../assets/fonts/Alexandria.ttf",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const inter = Bevan({
+  weight: "400",
+  subsets: ["latin"],
 });
-
 export default function Layout({ children }: { children: ReactNode }) {
-  return <main className={alexandria.className}>{children}</main>;
+  return <main className={inter.className}>{children}</main>;
 }
