@@ -33,33 +33,42 @@ export default function Home() {
       </Head>
 
       <div className={styles.pageContainer}>
-        <div className={styles.page}>
+        <section className={styles.page}>
           <header>
             <Logo />
             <Socials />
           </header>
-          <section className={styles.hero}>
+          <div className={styles.hero}>
             <h1 className={styles.title} ref={titleRef}>
               Kishor Shrestha
             </h1>
-          </section>
+          </div>
+        </section>
 
-          <footer className={styles.footer}>
-            <div className={styles.linkGroup}>
-              <Link href="/">Home</Link>
-              <Link href="/">About</Link>
-            </div>
+        <section className={styles.page}>
+          <h1>Projects</h1>
 
-            <Link href="">
-              <DownArrow />
-            </Link>
+          <ul className={styles.projectList}>
+            <li>TransQr</li>
+            <li>Visionbank</li>
+          </ul>
+        </section>
 
-            <div className={styles.linkGroup}>
-              <Link href="/">Projects</Link>
-              <Link href="/">Hire Me</Link>
-            </div>
-          </footer>
-        </div>
+        <footer className={styles.footer}>
+          <div className={styles.linkGroup}>
+            <Link href="/">Home</Link>
+            <Link href="/">Projects</Link>
+          </div>
+
+          <Link href="">
+            <DownArrow />
+          </Link>
+
+          <div className={styles.linkGroup}>
+            <Link href="/">Hire Me</Link>
+            <Link href="/">About</Link>
+          </div>
+        </footer>
       </div>
     </>
   );
